@@ -1,0 +1,9 @@
+/* Tainá Moreira Vieira Menegatti */
+ #preview {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .preview-item {
+    margin: 10px;
+  }

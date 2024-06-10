@@ -1,0 +1,20 @@
+/* Tainá Moreira Vieira Menegatti */
+ .clock {
+      font-family: Arial, sans-serif;
+      font-size: 36px;
+      display: inline-block;
+      padding: 10px;
+      border: 2px solid #000;
+      border-radius: 5px;
+    }
+
+    .separator {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    .hour, .minute, .second {
+      display: inline-block;
+      min-width: 40px;
+      text-align: center;
+    }

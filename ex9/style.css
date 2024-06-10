@@ -1,0 +1,26 @@
+/* Tainá Moreira Vieira Menegatti */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+#animateButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.5s, background-color 0.5s;
+}
+
+.animate {
+    transform: scale(1.5);
+    background-color: red;
+}
