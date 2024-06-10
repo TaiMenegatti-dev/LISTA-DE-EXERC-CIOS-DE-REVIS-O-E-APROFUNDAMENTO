@@ -1,26 +1,67 @@
 <!-- Tainá Moreira Vieira Menegatti -->
+<!-- Tive que fazer com o modelo de css e js diferente dos outros, pois não estava funcionando  -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<script src="index.js"></script>
-<title>Destacar Item Clicado</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista com Destaque</title>
+    <style>
+        body{
+            background-color: #b1b1b1;
+        }
+        /* Estilo para destacar o item */
+        .highlight {
+            background-color: yellow;
+        }
 
+        #myList{
+            margin: 200px 600px 0px 600px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+       li {
+        margin: 5px 25px;
+       }
+
+       H2 {
+        margin: 0px 0px 10px 115px;
+       }
+    </style>
 </head>
 <body>
+    
+    <ul id="myList">
+        <H2>Lista</H2>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
 
-<h2>Lista de Itens</h2>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Seleciona a lista
+            const list = document.getElementById('myList');
 
-<ul id="listaItens">
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3</li>
-    <li>Item 4</li>
-    <li>Item 5</li>
-</ul>
-
-
+            // Adiciona o evento de clique a cada item da lista
+            list.addEventListener('click', function(event) {
+                // Verifica se o elemento clicado é um item da lista
+                if (event.target.tagName === 'LI') {
+                    // Remove a classe de destaque de todos os itens
+                    const items = list.getElementsByTagName('li');
+                    for (let item of items) {
+                        item.classList.remove('highlight');
+                    }
+                    // Adiciona a classe de destaque ao item clicado
+                    event.target.classList.add('highlight');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
